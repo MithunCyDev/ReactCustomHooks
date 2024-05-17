@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Generate Unique Random Number
 const useRandomNumber = () => {
   const [randomNumber, setRandomNumber] = useState(0);
 
