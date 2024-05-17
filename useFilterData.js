@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 
+// Filtering data for data table
 const useFilteredData = (apiData, property) => {
   const [filterApiData, setFilterApiData] = useState([]);
 
