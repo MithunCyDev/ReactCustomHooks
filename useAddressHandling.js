@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// use this hook for address combination from response
 const useAddressHandling = () => {
   const getAddressComponents = (newAddress) => {
     const addressComponents = [
