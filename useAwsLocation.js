@@ -29,7 +29,7 @@ const useAwsLocation = (
 
   const fetchAddressDetails = useCallback(async () => {
     const params = {
-      IndexName: "ERP",
+      IndexName: "YourAWSIndexName",
       Text: address,
     };
 
