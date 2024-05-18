@@ -16,15 +16,8 @@ const useHandleSelectItem = (keys) => {
 
     if (item !== null && item !== undefined) {
       if (target !== false) {
-        const codeToStore = item.sales_id
-          ? item.sales_id
-          : item.purchase_order_number
-          ? item.purchase_order_number
-          : item.supplier_code
-          ? item.supplier_code
-          : item.email
-          ? item.email
-          : item.id;
+        const codeToStore = item.id ? item.id:""
+        
 
         localStorage.setItem(keys[0], target !== undefined ? target : false);
         localStorage.setItem(keys[1], JSON.stringify(item));
@@ -52,15 +45,7 @@ const useHandleSelectItem = (keys) => {
         // Clear localStorage data
         localStorage.clear();
 
-        const codeToRemove = item.sales_id
-          ? item.sales_id
-          : item.purchase_order_number
-          ? item.purchase_order_number
-          : item.supplier_code
-          ? item.supplier_code
-          : item.email
-          ? item.email
-          : item.id;
+        const codeToRemove = item.id ? item.id:""
 
         if (selectedRows.includes(codeToRemove)) {
           const updatedSelectedRows = selectedRows.filter(
